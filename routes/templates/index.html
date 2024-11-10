@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .hero {
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../static/images/environment_concept/Fish-girl-character-exploration.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+<!--        aspect-ratio: 3 / 1;-->
+        height: auto;
+        top: 0px;
+        bottom: 0px;
+        color: white;
+    }
+
+</style>
+<body>
+<div class="row">
+    <div class="col-12, col-s-12 hero">
+        <h1 style="text-align: center; padding:8% 0% 0% 0%;">2D Animation</h1>
+        <h5 style="text-align: center; padding: 3% 20% 8% 20%; line-height: 2rem; opacity:0.8; font-family: 'Georgia';">
+            With expertize in <b>Toon Boom Harmony</b>, <b>Storyboarder Pro</b>, <b>Photoshop</b> and <b>Clip Studio Paint</b>
+            I can create character designs, 2D animations and Storyboards. <br>
+            In 2D, the jobs I can do are Character design, model sheets, storyboards and animatics, rigs, background illustration, animation (both
+            frame-by-frame hand-drawn and cut-out), compositing and vfx (in Toon Boom Harmony), and basic level sound editing also. <br>
+            Medium level video editing on <b>Da Vinci </b> and 3D models for import into Toon Boom Harmony are plus.
+        </h5>
+    </div>
+    <a href="{{ url_for('main.character_design')}}#character-start" class="col-6 col-s-12 portfolio-options" style="color:{{col[0]}}">
+        <h1>Character Design</h1>
+    </a>
+    <a href="{{ url_for('main.animations')}}#animations-start" class="col-6 col-s-12 portfolio-options" style="color:{{col[1]}}">
+        <h1>Animations</h1>
+    </a>
+
+    {% block inner_content %}
+    {% endblock %}
+
+    {% if bottom_menu == 'y' %}
+    <a href="{{ url_for('main.character_design')}}#character-start" class="col-6 col-s-12 portfolio-options" style="color:{{col[0]}}">
+        <h1>Character Design</h1>
+    </a>
+    <a href="{{ url_for('main.animations')}}" class="col-6 col-s-12 portfolio-options" style="color:{{col[1]}}">
+        <h1>Animations</h1>
+    </a>
+    {% endif %}
+</div>
+
+
+{% endblock %}
