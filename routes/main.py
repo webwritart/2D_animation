@@ -3,11 +3,11 @@ from flask import Blueprint, render_template
 
 main = Blueprint('main', __name__, static_folder='static', template_folder='templates')
 
-
 @main.route('/')
 def home():
-    col = ['#d9d9d9', '#d9d9d9']
-    return render_template('index.html', col=col)
+    col = ['#d9d9d9', 'white']
+    bottom_menu = 'y'
+    return render_template('animations.html', col=col, bottom_menu=bottom_menu)
 
 
 @main.route('/character_design')
@@ -17,9 +17,5 @@ def character_design():
     return render_template('character_design.html', col=col, bottom_menu=bottom_menu)
 
 
-@main.route('/animations')
-def animations():
-    col = ['#d9d9d9', 'white']
-    bottom_menu = 'y'
-    return render_template('animations.html', col=col, bottom_menu=bottom_menu)
+
 

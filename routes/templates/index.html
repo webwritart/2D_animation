@@ -4,7 +4,7 @@
 <style>
     .hero {
         width: 100%;
-        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../static/images/environment_concept/Fish-girl-character-exploration.jpg');
+        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../static/images/environment_concept/fish_girl_low_web.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 <!--        aspect-ratio: 3 / 1;-->
@@ -12,6 +12,7 @@
         top: 0px;
         bottom: 0px;
         color: white;
+        margin-bottom: 2%;
     }
 
 </style>
@@ -27,24 +28,9 @@
             Medium level video editing on <b>Da Vinci </b> and 3D models for import into Toon Boom Harmony are plus.
         </h5>
     </div>
-    <a href="{{ url_for('main.character_design')}}#character-start" class="col-6 col-s-12 portfolio-options" style="color:{{col[0]}}">
-        <h1>Character Design</h1>
-    </a>
-    <a href="{{ url_for('main.animations')}}#animations-start" class="col-6 col-s-12 portfolio-options" style="color:{{col[1]}}">
-        <h1>Animations</h1>
-    </a>
 
     {% block inner_content %}
     {% endblock %}
-
-    {% if bottom_menu == 'y' %}
-    <a href="{{ url_for('main.character_design')}}#character-start" class="col-6 col-s-12 portfolio-options" style="color:{{col[0]}}">
-        <h1>Character Design</h1>
-    </a>
-    <a href="{{ url_for('main.animations')}}" class="col-6 col-s-12 portfolio-options" style="color:{{col[1]}}">
-        <h1>Animations</h1>
-    </a>
-    {% endif %}
 </div>
 
 
